@@ -1,13 +1,77 @@
-*
-{
-}
+/* Corps de la page */
 
 body
 {
 	font-family: 'trebuchet MS';
 	margin: 0 auto;
-	width: 1200px;
+	width: 900px;
+	border: solid 1px #42A5F5;
+	font-size: 1em;
 }
+
+/* En Tête */
+
+header
+{
+	display: flex;
+	justify-content: flex-start;
+}
+
+#profil
+{
+	background-color: #42A5F5;
+	flex: 0.8;
+}
+
+.photo
+{
+    margin: 15% auto;
+    height: 150px;
+    width: 150px;
+    border: solid black 1px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+header img
+{
+	width: 110%;
+	margin-top: -10px;
+	margin-left: -15px;
+}
+
+#prenom
+{
+	padding-top: 5%;
+	flex: 2;
+}
+
+#prenom h1
+{
+	margin-top: 5%;
+	margin-bottom: 0%;
+	font-size: 3em;
+	text-transform: uppercase;
+}
+
+#prenom h3
+{
+	margin-bottom: 5%;
+	margin-top: 0%;
+	font-size: 1.5em;
+}
+
+.jimmy
+{
+	color: #42A5F5;
+}
+
+.dev
+{
+	border-bottom: solid 2px #42A5F5;
+}
+
+/* Bloc page : Aside / Section / Footer */
 
 #bloc_page
 {
@@ -16,7 +80,7 @@ body
 
 h2
 {
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 /* Aside */
@@ -29,22 +93,10 @@ aside
 	flex: 0.8;
 }
 
-#photo_cv
-{
-	width: 110%;
-	margin-top: -10px;
-	margin-left: -15px;
-}
+/* Aside - Photo */
 
-#photo
-{
-    margin: 15% auto;
-    height: 150px;
-    width: 150px;
-    border: solid black 1px;
-    border-radius: 50%;
-    overflow: hidden;
-}
+
+/* Aside - Mise en page */
 
 .liseret h2
 {
@@ -53,11 +105,6 @@ aside
 	text-align: center;
 	text-transform: uppercase;
 	padding:  2% 0% 2% 0%;
-}
-
-#contact h2
-{
-	margin-top: 0;
 }
 
 .liseret
@@ -71,9 +118,20 @@ aside
 	padding-right: 10%;
 }
 
+#contact h2
+{
+	margin-top: 0;
+}
+
 #contact a
 {
 	text-decoration: none;
+	color: #DD2C00;
+}
+
+#contact a:hover
+{
+	color: #004D40;	
 }
 
 .gras
@@ -86,39 +144,40 @@ aside
 	margin-top: auto;
 }
 
-#loisirs
+/* Aside - Loisirs */
+
+.loisirs
 {
+	text-align: center;
+	font-size: 2em;
+	padding-left: 25px;
+	padding-right: 25px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-.passions
+.loisirs i
 {
-	font-size: 300%;
-	margin: 0 auto;
-	margin-bottom: 5%;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* En Tête */
-
-#en_tête
-{
-	flex: 2;
-}
-
-header, #section, footer
+#section, footer, #prenom
 {
 	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #section
 {
-	margin-top: 10%;
-}
-
-.jimmy
-{
-	color: #42A5F5;
+	flex: 2;
 }
 
 .px1
@@ -128,33 +187,13 @@ header, #section, footer
 
 .px2
 {
-	padding-right: 2rem;
+	padding-right: 1rem;
 }
 
 .px3
 {
 	font-size: 0.5em;
 	padding-right: 1rem;
-}
-
-.dev
-{
-	border-bottom: solid 2px #42A5F5;
-}
-
-#prenom h1
-{
-	margin-top: 5%;
-	margin-bottom: 0%;
-	font-size: 5em;
-	text-transform: uppercase;
-}
-
-#prenom h3
-{
-	margin-bottom: 5%;
-	margin-top: 0%;
-	font-size: 3em;
 }
 
 /* section */
@@ -209,4 +248,77 @@ header, #section, footer
 .reco
 {
 	flex: 1;
+}
+
+/* Responsive 768 px */
+
+@media all and (max-device-width: 768px)
+{
+
+	body
+	{
+		font-size: 1.2em;
+	}
+
+	header
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	#profil
+	{
+		width: 100%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	.photo
+	{
+		margin: auto;
+		width: 250px;
+		height: 250px;
+	}
+
+	header img
+	{
+		width: 110%;
+		margin-top: -15px;
+		margin-left: -25px;
+	}
+
+	#bloc_page
+	{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#prenom
+	{
+		padding-top: 3%;
+	}
+
+	#contact
+	{
+		text-align: center;
+	}
+
+	.loisirs
+	{
+		margin-bottom: 2%;
+	}
+
+}
+
+/* Responsive 320 px */
+
+@media all and (max-device-width: 320px)
+{
+
+
+	{
+
+	}
 }
