@@ -2,25 +2,31 @@
 
 body
 {
-	font-family: 'trebuchet MS';
+	font-family: 'trebuchet MS', 'verdana';
 	margin: 0 auto;
-	width: 900px;
+	max-width: 900px;
 	border: solid 1px #42A5F5;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 /* En Tête */
 
-header
+header img
+{
+	width: 110%;
+	margin-top: -10px;
+	margin-left: -15px;
+}
+
+.flex
 {
 	display: flex;
-	justify-content: flex-start;
 }
 
 #profil
 {
 	background-color: #42A5F5;
-	flex: 0.8;
+	flex: 1;
 }
 
 .photo
@@ -31,13 +37,6 @@ header
     border: solid black 1px;
     border-radius: 50%;
     overflow: hidden;
-}
-
-header img
-{
-	width: 110%;
-	margin-top: -10px;
-	margin-left: -15px;
 }
 
 #prenom
@@ -61,7 +60,7 @@ header img
 	font-size: 1.5em;
 }
 
-.jimmy
+.blue
 {
 	color: #42A5F5;
 }
@@ -90,7 +89,7 @@ aside
 	display: flex;
 	flex-direction: column;
 	background-color:  #42A5F5;
-	flex: 0.8;
+	flex: 1;
 }
 
 /* Aside - Photo */
@@ -126,12 +125,12 @@ aside
 #contact a
 {
 	text-decoration: none;
-	color: #DD2C00;
+	color: #263238;
 }
 
 #contact a:hover
 {
-	color: #004D40;	
+	color: #4527A0;	
 }
 
 .gras
@@ -139,9 +138,9 @@ aside
 	font-weight: bold;
 }
 
-#marge
+.flex_grow
 {
-	margin-top: auto;
+	flex-grow: 3;
 }
 
 /* Aside - Loisirs */
@@ -169,7 +168,7 @@ aside
     align-items: center;
 }
 
-#section, footer, #prenom
+#section, #prenom
 {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -239,6 +238,7 @@ aside
 
 #reco_global
 {
+	flex-wrap: wrap;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -250,17 +250,12 @@ aside
 	flex: 1;
 }
 
-/* Responsive 768 px */
+/* Responsive 900 px */
 
-@media all and (max-device-width: 768px)
+@media all and (max-width: 900px)
 {
 
-	body
-	{
-		font-size: 1.2em;
-	}
-
-	header
+	.flex
 	{
 		display: flex;
 		flex-direction: column;
@@ -278,15 +273,13 @@ aside
 	.photo
 	{
 		margin: auto;
-		width: 250px;
-		height: 250px;
 	}
 
 	header img
 	{
 		width: 110%;
-		margin-top: -15px;
-		margin-left: -25px;
+		margin-top: -10px;
+		margin-left: -15px;
 	}
 
 	#bloc_page
@@ -312,13 +305,37 @@ aside
 
 }
 
-/* Responsive 320 px */
+/* Responsive 600 px */
 
-@media all and (max-device-width: 320px)
+@media all and (max-device-width: 600px)
 {
 
-
+	h2
 	{
+		text-align: center;
+	}
 
+	.global
+	{
+		align-items: center;
+		flex-direction: column;
+	}
+
+}
+
+/* Responsive 468 px */
+
+@media all and (max-device-width: 468px)
+{
+
+	#reco_global
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.px1, .px2, .px3
+	{
+		display: none;
 	}
 }
