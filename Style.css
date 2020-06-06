@@ -1,0 +1,324 @@
+/* Corps de la page */
+
+body
+{
+	font-family: 'trebuchet MS', 'verdana';
+	margin: 0 auto;
+	max-width: 900px;
+	border: solid 1px #42A5F5;
+	font-size: 0.9em;
+}
+
+h2
+{
+	font-size: 1.5em;
+}
+
+/* Header */
+
+.blue
+{
+	color: #42A5F5;
+}
+
+.flex
+{
+	display: flex;
+}
+
+.vp_photo
+{
+	margin: 15% auto;
+	height: 150px;
+	width: 150px;
+	border: solid black 1px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#head_photo
+{
+	background-color: #42A5F5;
+	flex: 1;
+}
+
+#photo
+{
+	width: 110%;
+	margin-top: -10px;
+	margin-left: -15px;
+}
+
+#name
+{
+	flex: 2;
+}
+
+#name h1
+{
+	padding-top: 10%;
+	margin: 0;
+	font-size: 3em;
+	text-transform: uppercase;
+}
+
+#name h3
+{
+	margin-bottom: 5%;
+	margin-top: 0%;
+	font-size: 1.5em;
+}
+
+#border_dev
+{
+	border-bottom: solid 2px #42A5F5;
+}
+
+/* Aside */
+
+.bold
+{
+	font-weight: bold;
+}
+
+.flex_grow
+{
+	flex-grow: 3;
+}
+
+.aside h2
+{
+	background-color: #455A64;
+	color: #42A5F5;
+	text-align: center;
+	text-transform: uppercase;
+	padding:  2% 0%;
+	margin-bottom: 0;
+}
+
+.aside p
+{
+	padding: 0 10%;
+}
+
+#my_contact
+{
+	display: flex;
+	flex-direction: column;
+	background-color:  #42A5F5;
+	flex: 1;
+}
+
+#contact h2
+{
+	margin-top: 0;
+}
+
+#contact a
+{
+	text-decoration: none;
+	color: #263238;
+}
+
+#contact a:hover
+{
+	color: #4527A0;	
+}
+
+/* Aside - Hobbies */
+
+.hobbies
+{
+	text-align: center;
+	font-size: 2em;
+	padding: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.hobbies i
+{
+	border: 2px solid black;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.px1
+{
+	padding-right: 1rem;
+}
+
+.px2
+{
+	font-size: 0.5em;
+	padding-right: 1rem;
+}
+
+#section, #name
+{
+	padding: 0 5%;
+}
+
+#section
+{
+	flex: 2;
+}
+
+/* Section */
+
+.border_H2
+{
+	border-bottom: 2px solid #42A5F5;
+	margin-bottom: 2%;
+}
+
+.flex_row
+{
+	display: flex;
+	flex-direction: row;
+}
+
+#formations h2, #experience h2, #recom h2
+{
+	padding-top: 3%;
+	margin-top: 0;
+	margin-bottom: 1%;
+	text-transform: uppercase;
+}
+
+/* Section formation */
+
+.flex_date
+{
+	flex: 1;
+}
+
+.align_date
+{
+	display: inline-flex;
+}
+
+.comp
+{
+	flex: 2;
+	margin-left: 2%;
+}
+
+/* Footer */
+
+.reco
+{
+	flex: 1;
+}
+
+#reco_global
+{
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 5%;
+}
+
+/* Responsive 900 px */
+
+@media all and (max-width: 900px)
+{
+
+	.flex
+	{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.vp_photo
+	{
+		margin: auto;
+	}
+
+	.hobbies
+	{
+		margin: 0;
+		padding: 2% 0;
+	}
+
+	#my_contact
+	{
+		order: 3;
+	}
+
+	#head_photo
+	{
+		width: 100%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	#photo
+	{
+		width: 110%;
+		margin-top: -10px;
+		margin-left: -15px;
+	}
+
+	#bloc_page
+	{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	#name
+	{
+		padding-top: 3%;
+	}
+
+	#contact
+	{
+		text-align: center;
+	}
+
+}
+
+/* Responsive 600 px */
+
+@media all and (max-width: 600px)
+{
+
+	h2
+	{
+		text-align: center;
+	}
+
+	.flex_row
+	{
+		align-items: center;
+		flex-direction: column;
+	}
+
+}
+
+/* Responsive 468 px */
+
+@media all and (max-width: 468px)
+{
+
+	.px1, .px2
+	{
+		display: none;
+	}
+
+	#reco_global
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
