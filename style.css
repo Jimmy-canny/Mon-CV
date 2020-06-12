@@ -99,7 +99,7 @@ article
 	flex-grow: 3;
 }
 
-.aside h2
+.aside h3
 {
 	background-color: #455A64;
 	color: #42A5F5;
@@ -122,7 +122,7 @@ article
 	flex: 1;
 }
 
-#contact h2
+#contact h3
 {
 	margin-top: 0;
 }
